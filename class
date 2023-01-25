@@ -1,0 +1,30 @@
+#include <Button.h>
+
+Button myButton(2); // Attaches the button to pin 2
+
+void setup() {
+  // set up any necessary initial configuration
+}
+
+void loop() {
+  if (myButton.pressed()) {
+    // Do something when button is pressed
+    // for example:
+    digitalWrite(13, HIGH);
+  }
+  
+  if(myButton.doubleClicked()){
+    // Do something when button is double clicked
+    // for example:
+    digitalWrite(13, LOW);
+  }
+  
+  if(myButton.longPressed()){
+    // Do something when button is long pressed
+    // for example:
+    digitalWrite(12, HIGH);
+  }
+  else{
+    digitalWrite(12, LOW);
+  }
+}
